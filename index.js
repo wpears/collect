@@ -7,9 +7,9 @@ function col (str){
     ;
   return this;
 }
-
 col.obj = {};
-col.dump = function(){
+
+function dump(){
   var ret;
   if(col.obj.anon&&Object.keys(col.obj).length===1){
     if(col.obj.anon.length===1) ret = col.obj.anon[0];
@@ -22,3 +22,4 @@ col.dump = function(){
 }
 
 Array.prototype.collect = col;
+Array.prototype.dump = dump;
